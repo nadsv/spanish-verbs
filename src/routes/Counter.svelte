@@ -1,5 +1,8 @@
 <script lang="ts">
 	import { spring } from 'svelte/motion';
+	import * as sv from 'spanish-verbs';
+
+	console.log(sv.getConjugation('hablar', 'INDICATIVE_PRESENT', 2));
 
 	let count = 0;
 
