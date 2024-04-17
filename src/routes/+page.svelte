@@ -3,9 +3,11 @@
 	import VerbForm from '$lib/components/VerbForm.svelte';
 
 	let cnj = null;
+	let verb = '';
 
     function handleResult(event) {
-		cnj = event.detail.result;					
+		cnj = event.detail.result;	
+		verb = event.detail.verb;					
 	}
 	
 </script>
@@ -17,8 +19,9 @@
 
 <section>
 	<VerbForm on:result={handleResult}></VerbForm>
-	<div class="mt-6">
+	<div class="mt-3">
 		{#if cnj}
+			<h1 class="uppercase">{verb}</h1>
 			<ResultTable cnj={cnj} />
 	 	{/if}
 	</div>

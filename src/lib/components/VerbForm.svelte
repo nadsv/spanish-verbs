@@ -9,7 +9,8 @@
 
 	function findConjunctions() {
 		dispatch('result', {
-			result: conjunctions(verb)
+			result: conjunctions(verb),
+			verb: verb
 		});
 	}
 
@@ -18,7 +19,7 @@
 <div class="flex w-full gap-x-3 items-center">
 	<Label for="first_name" class="mb-2">Infinitive</Label>
 	<Input type="text" id="infinitive" bind:value={verb} required />
-	<Button class="bg-primary-500" on:click={findConjunctions}>Add</Button>
+	<Button class="bg-primary-500" on:click={findConjunctions}>FIND</Button>
 </div>
 
 <style>
