@@ -12,7 +12,6 @@
 		<NavUl {hidden} >
 		  <NavLi href="/" active={true} class="font-bold text-primary-500">Home</NavLi>
 		  <NavLi href="/about" class="font-bold text-primary-500">About</NavLi>
-		  <NavLi href="/sverdle" class="font-bold text-primary-500">sverdle</NavLi>
 		</NavUl>
 	</Navbar>
 </header>
