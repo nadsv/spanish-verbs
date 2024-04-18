@@ -11,7 +11,7 @@
 		<slot></slot>
 	</main>
 
-	<footer class="text-primary-500">
+	<footer class="bg-primary-100 text-primary-500">
 		<p>spanish verbs are hard</p>
 	</footer>
 </div>
