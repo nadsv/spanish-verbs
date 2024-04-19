@@ -4,9 +4,9 @@
 	export let cnj;
 </script>
 
-<Table>
+<Table striped={true} shadow class="wrapper">
 	<TableBody>
-		<TableBodyRow  class="bg-primary-600">
+		<TableBodyRow  class="!bg-primary-600">
 				<TableBodyCell class="uppercase text-center text-white px-3 py-2">tense</TableBodyCell>
 				{#each Object.entries(personsList) as [number, name]}
 					<TableBodyCell class="uppercase text-center text-white px-3 py-2">{name}</TableBodyCell>
@@ -14,9 +14,9 @@
 		</TableBodyRow>
 		{#each Object.entries(cnj) as [tense, persons]}
 			<TableBodyRow>
-				<TableBodyCell class="bg-primary-200 px-3 py-2">{tenseName(tense)}</TableBodyCell>
+				<TableBodyCell class="bg-primary-200 px-3 py-1">{tenseName(tense)}</TableBodyCell>
 				{#each Object.entries(persons) as [number, name]}
-					<TableBodyCell class="text-center px-3 py-2">{name}</TableBodyCell>
+					<TableBodyCell class="text-center px-3 py-1">{name}</TableBodyCell>
 				{/each}
 			</TableBodyRow>
 		{/each}
