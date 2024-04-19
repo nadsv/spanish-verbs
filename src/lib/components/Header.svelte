@@ -7,7 +7,7 @@
 <header>
 	<Navbar let:hidden let:toggle class="bg-primary-200">
 		<NavBrand href="{base}/" >
-		  <img src="{base}/{logo}" alt="VerbosVerbs" class="corner"/>
+		  <img src="{logo}" alt="VerbosVerbs" class="corner"/>
 		</NavBrand>
 		<NavHamburger on:click={toggle} />
 		<NavUl {hidden} >
