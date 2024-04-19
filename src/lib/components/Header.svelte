@@ -23,6 +23,6 @@
 		justify-content: space-between;
 	}
 	.corner {
-		width: 12em;
+		width: 11em;
 	}
 </style>
