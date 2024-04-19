@@ -1,17 +1,18 @@
 <script>
 	import logo from '$lib/images/logo-no-background.svg';
 	import { Navbar, NavBrand, NavLi, NavUl, NavHamburger } from 'flowbite-svelte';
+	import { base } from '$app/paths';
 </script>
 
 <header>
 	<Navbar let:hidden let:toggle class="bg-primary-200">
-		<NavBrand href="/" >
-		  <img src="{logo}" alt="VerbosVerbs" class="corner"/>
+		<NavBrand href="{base}/" >
+		  <img src="{base}/{logo}" alt="VerbosVerbs" class="corner"/>
 		</NavBrand>
 		<NavHamburger on:click={toggle} />
 		<NavUl {hidden} >
-		  <NavLi href="/" active={true} class="font-bold text-primary-500">Home</NavLi>
-		  <NavLi href="/about" class="font-bold text-primary-500">About</NavLi>
+		  <NavLi href="{base}/" active={true} class="font-bold text-primary-500">Home</NavLi>
+		  <NavLi href="{base}/about" class="font-bold text-primary-500">About</NavLi>
 		</NavUl>
 	</Navbar>
 </header>
