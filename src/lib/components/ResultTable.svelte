@@ -23,7 +23,7 @@
 				<Button class="bg-primary-500" pill size="xs" on:click={Transpose}>TRANSPONSE</Button>
 			</TableBodyCell>
 			{#each columns as title}
-				<TableBodyCell class="uppercase text-center text-white px-3 py-2"><span class="cell-wrap">{formatName(title)}</span></TableBodyCell>
+				<TableBodyCell class="uppercase text-center text-white px-3 py-2"><span class="header-cell">{formatName(title)}</span></TableBodyCell>
 			{/each}
 	</TableBodyRow>
 	{#each rows as row}
@@ -39,12 +39,17 @@
 
 
 <style>
-	.cell-wrap {
+	.header-cell {
 		white-space: pre-wrap;
 	}
 @media (max-width: 1200px) { 
 	.font-small {
 		font-size: 11px !important;
+	}
+
+	.header-cell {
+		font-size: 11px !important;
+		font-weight: bold;
 	}
 }	
 </style>
