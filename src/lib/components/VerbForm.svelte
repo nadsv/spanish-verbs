@@ -1,7 +1,8 @@
 <script lang="ts">
 	import { Input, Label, Button } from 'flowbite-svelte';
-	import { conjunctions }  from './helpers';
+	import { conjunctions }  from '../helpers';
 	import { createEventDispatcher } from 'svelte';
+	import { upright }  from '../../stores/stores';
 
 	let verb = 'ser';
 
@@ -9,7 +10,6 @@
 
 	function findConjunctions() {
 		dispatch('result', {
-			result: conjunctions(verb),
 			verb: verb
 		});
 	}
